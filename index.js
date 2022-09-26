@@ -19,5 +19,6 @@ const categoryRoutes = require("./routes/category")
 // deploy routes
 app.use("/users", userRoutes);
 app.use("/profils", profilRoutes);
+app.use("/category",categoryRoutes);
 
 app.listen(3000, ()=>console.log("SERVER START"))
