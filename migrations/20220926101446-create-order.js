@@ -9,37 +9,56 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       listProduct: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       fname: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       lname: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       shipAdresse: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       city: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       zip: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       country: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       status: {
+        allowNull: false,
         type: Sequelize.BOOLEAN
       },
       totalPrice: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       idUser: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references:{
+          model:'Users',
+          key:'id'
+        }
       },
       idProfil: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references:{
+          model:'Profils',
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,

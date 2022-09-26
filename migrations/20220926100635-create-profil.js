@@ -9,22 +9,32 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       fname: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       lname: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       adresse: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       phone: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       country: {
+        allowNull: false,
         type: Sequelize.STRING
       },
       idUser: {
-        type: Sequelize.INTEGER
+        allowNull: false,
+        type: Sequelize.INTEGER,
+        references:{
+          model:'Users',
+          key:'id'
+        }
       },
       createdAt: {
         allowNull: false,
