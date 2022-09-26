@@ -6,6 +6,9 @@ app.use(cors())
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
+// declare token verification
+const auth = require("./midleware/authentication") 
+
 // declare Routes
 const userRoutes = require("./routes/user")
 const oderRoutes = require("./routes/order")
@@ -15,5 +18,6 @@ const categoryRoutes = require("./routes/category")
 
 // deploy routes
 app.use("/users", userRoutes);
+app.use("/profils", profilRoutes);
 
 app.listen(3000, ()=>console.log("SERVER START"))
